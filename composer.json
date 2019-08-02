@@ -1,0 +1,19 @@
+{
+    "name": "nguyenthang011099/psr004",
+    "description": "Fake name",
+    "type": "library",
+    "license": "132323",
+    "authors": [
+        {
+            "name": "Nguyenthang",
+            "email": "nguyenthang011099.hust@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "fake\\": "src/fake/"
+        }
+    }
+}
