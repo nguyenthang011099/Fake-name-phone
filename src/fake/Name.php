@@ -54,10 +54,7 @@ class Name{
     public $midName=array(
         'Thị','Văn','Minh','Gia',"Trung","Kieu","Việt","Đức"
     );
-    public $phoneNumber=array(
-        '098234585','0964736459','0312343267','0945698725','0361597532','0345897536',
-        '0325487965','0971236987','0981236584','0981565473','0972587413','0970258740'
-    );
+    
 
     public function random()
     {
@@ -67,8 +64,7 @@ class Name{
 
         return $this->firstName[array_rand($this->firstName)]." ".
                $this->midName[array_rand($this->midName)]." ".
-               $this->lastName[array_rand($this->lastName)]."\n".
-               $this->phoneNumber[array_rand($this->phoneNumber)]."\n";
+               $this->lastName[array_rand($this->lastName)]."\n";
 
     }
 

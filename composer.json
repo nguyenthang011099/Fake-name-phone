@@ -1,5 +1,5 @@
 {
-    "name": "nguyenthang011099/psr004",
+    "name": "nguyenthang011099/psr4",
     "description": "Fake name",
     "type": "library",
     "license": "132323",
@@ -17,3 +17,5 @@
         }
     }
 }
+
+
