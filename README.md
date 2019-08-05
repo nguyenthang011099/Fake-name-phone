@@ -16,7 +16,7 @@ Faker is a PHP library that generates fake data for you. Whether you need to boo
  
  
 ### Faker/Fake/Name
- `  name       //Nguyen Minh Thang
+ `  name        //Nguyen Minh Thang
     
 ### Faker/Fake/Address
     address    // Ha Noi
