@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Faker;
+namespace Faker\vi_VN;
 
 
 class Address

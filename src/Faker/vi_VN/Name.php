@@ -1,5 +1,5 @@
 <?php
-namespace Faker;
+namespace Faker\vi_VN;
 class Name{
 
     public $firstName = array(
