@@ -7,7 +7,7 @@ Faker is a PHP library that generates fake data for you. Whether you need to boo
 # Table of Contents`
 - [Installation](#installation)
 - [Export](#export)
-      - [Name](#fakerprovideren_usperson)
+- [Name](#fakerprovideren_usperson)
       - [Address](#fakerprovideren_usaddress)
       - [Phone Number](#fakerprovideren_usphonenumber)
 
