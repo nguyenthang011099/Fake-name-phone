@@ -7,7 +7,7 @@ class Phone{
         '0322345234','0987492823',
     );
 
-    public function random(){
+    public function phone(){
         return $this->phoneNumber[array_rand($this->phoneNumber)];
     }
 }

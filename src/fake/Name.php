@@ -56,7 +56,7 @@ class Name{
     );
     
 
-    public function random()
+    public function name()
     {
 
 

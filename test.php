@@ -1,8 +1,17 @@
 <?php
 require_once "vendor/autoload.php";
+
 use fake\Name;
-$obj1 = new Name();
-echo ($obj1->random());
 use fake\Phone;
-$obj2= new Phone();
-echo ($obj2->random())."\n";   
+use fake\Address;
+
+$fake = new Name();
+echo($fake->name());
+
+
+$fake1 = new Phone();
+echo ($fake1->phone()) . "\n";
+
+
+$fake2 = new Address();
+echo($fake2->address());
