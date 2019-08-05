@@ -1,7 +1,7 @@
 <?php
 
 
-namespace fake;
+namespace Faker;
 
 
 class Address
@@ -30,7 +30,7 @@ class Address
     );
 
 
-    public function address()
+    public function random()
     {
         return $this->province[array_rand($this->province)]."\n";
     }

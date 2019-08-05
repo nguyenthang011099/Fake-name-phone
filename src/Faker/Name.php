@@ -1,5 +1,5 @@
 <?php
-namespace fake;
+namespace Faker;
 class Name{
 
     public $firstName = array(
@@ -56,7 +56,7 @@ class Name{
     );
     
 
-    public function name()
+    public function random()
     {
 
 
