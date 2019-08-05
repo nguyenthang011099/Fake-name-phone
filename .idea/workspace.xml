@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1defe31-5dd3-49a3-a64d-774e73a7e677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fake/Address.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fake/Name.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/fake/Name.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fake/Phone.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/fake/Phone.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fake/phone.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
-    </list>
+    <list default="true" id="e1defe31-5dd3-49a3-a64d-774e73a7e677" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,12 +151,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564972661598</updated>
-      <workItem from="1564972664288" duration="577000" />
+      <workItem from="1564972664288" duration="832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="577000" />
+    <option name="totallyTimeSpent" value="832000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="25" width="1323" height="743" extended-state="6" />
