@@ -53,3 +53,5 @@ Faker is a PHP library that generates fake data for you. Whether you need to boo
         }
      phone     // 0978482834
      
+# Result
+    ![](image\web.png)
