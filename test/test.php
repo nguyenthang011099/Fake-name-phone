@@ -6,3 +6,5 @@ $fake = new Fake();
 echo $fake->Name;
 echo $fake->Address;
 echo $fake->Phone;
+echo $fake->Digit;
+echo $fake->Time;

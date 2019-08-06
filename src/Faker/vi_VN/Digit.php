@@ -6,7 +6,7 @@ namespace Faker\vi_VN;
 
 class Digit
 {
-    public function time(){
+    public function random(){
         return mt_rand(0,9);
     }
 }
