@@ -10,7 +10,7 @@ Faker is a PHP library that generates fake data for you. Whether you need to boo
     - [Name](#1)
     - [Address](#2)
     - [Phone Number](#3)
-    - [Digit](#4)
+    - [Birth](#4)
 
 ## Installation
  composer require nguyenthang011099/faker-viet-nam
@@ -52,6 +52,28 @@ Faker is a PHP library that generates fake data for you. Whether you need to boo
             return $this->phoneNumber[array_rand($this->phoneNumber)];
         }
      phone     // 0978482834
+     
+### Birth
+     
+      public static function random()
+    {
+        $time =rand( strtotime("Jan 01 1950"), strtotime("Dec 31 2019"));
+        return date("M-d-Y", $time);
+
+    }
+     
+### Web html    
+    use Faker\Fake;
+    $fake=new Fake();
+    ?>
+    <?php for ($i=0; $i < 10; $i++): ?>
+        <h1><?php echo $fake->Name  ;?></h1>
+        <h2><?php echo $fake->Phone." : ".$fake->Address ;?></h2>
+        <br>
+        <h2><?php echo $fake->Time;?></h2> 
+        <hr>
+
+    <?php endfor; ?>
      
 # Result
 ![](image/web.png)
