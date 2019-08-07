@@ -11,6 +11,7 @@ Faker là một thư viện được sử dụng trong PHP- cái mà chúng ta s
     - [Phone Number](#3)
     - [Birth](#4)
 
+<<<<<<< HEAD
 ## Cài Đặt
 Chúng ta có nhiều cách cài đặt nó, bạn có thể tải nó về song sau đó copy vào thư mục project của bạn, nhưng tôi khuyên bạn nên dùng composer cho công việc này, để cài đặt nó bạn chỉ cần chạy lệnh này trong project của bạn:
    
@@ -27,6 +28,35 @@ Do chúng ta cài Faker thông qua commposer nên để sử dụng nó bạn ch
 Mọi thứ cấu hình coi như đã xong, việc kế tiếp là bạn khởi tạo một class của nó, chúng ta hãy xem xét ví dụ dưới đây:
 
     use Faker\Fake;
+=======
+## Installation
+ composer require nguyenthang011099/faker-viet-nam
+ 
+ 
+### Create Fake Class (Example)
+    public function __construct()
+        {
+            $this->Name= new Name();
+            $this->Address= new Address();
+            $this->Phone= new Phone();
+        }
+        public function __get($attribute)
+        {
+            return $this->$attribute->random();
+    
+        }
+### Name
+     public function random()
+        {
+            return $this->firstName[array_rand($this->firstName)]." ".
+                   $this->midName[array_rand($this->midName)]." ".
+                   $this->lastName[array_rand($this->lastName)]."\n";
+    
+        }
+        
+        
+    name        //Nguyen Minh Thang
+>>>>>>> f2207d5eafeed3f29d97c309a501fdfd48cb8b3a
    
     $faker = new Fake();
      //khoi tao đối tượng faker
@@ -75,6 +105,37 @@ Ví dụ:
 
     <?php endfor; ?>
     
+<<<<<<< HEAD
 
+=======
+### Phone Number
+    public function random(){
+            return $this->phoneNumber[array_rand($this->phoneNumber)];
+        }
+     phone     // 0978482834
+     
+### Birth
+     
+      public static function random()
+    {
+        $time =rand( strtotime("Jan 01 1950"), strtotime("Dec 31 2019"));
+        return date("M-d-Y", $time);
+
+    }
+     
+### Web html    
+    use Faker\Fake;
+    $fake=new Fake();
+    ?>
+    <?php for ($i=0; $i < 10; $i++): ?>
+        <h1><?php echo $fake->Name  ;?></h1>
+        <h2><?php echo $fake->Phone." : ".$fake->Address ;?></h2>
+        <br>
+        <h2><?php echo $fake->Time;?></h2> 
+        <hr>
+
+    <?php endfor; ?>
+     
+>>>>>>> f2207d5eafeed3f29d97c309a501fdfd48cb8b3a
 # Result
 ![](image/web.png)
