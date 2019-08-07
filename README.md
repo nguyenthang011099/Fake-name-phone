@@ -4,14 +4,13 @@
 Faker là một thư viện được sử dụng trong PHP- cái mà chúng ta sử dụng để khởi tạo ra dữ liệu ảo. Bạn có thể tạo dữ liệu trực tiếp thông qua database console hay GUI hoặc một đoạn mã script php nào đó, có thể đáp ứng nhu cầu của bạn nhưng dữ liệu được tao ra lúc này có thể không giống thực tế lắm. Với thư viện Faker bạn có  tạo ra dữ liệu giả nhưng không khác gì dữ liệu thật
 
 # Các nội dung chính
-- [Installation](#installation)
-- [Export](#export)
+- [Cài Đặt](#1)
+- [Output](#export)
     - [Name](#1)
     - [Address](#2)
     - [Phone Number](#3)
     - [Birth](#4)
 
-<<<<<<< HEAD
 ## Cài Đặt
 Chúng ta có nhiều cách cài đặt nó, bạn có thể tải nó về song sau đó copy vào thư mục project của bạn, nhưng tôi khuyên bạn nên dùng composer cho công việc này, để cài đặt nó bạn chỉ cần chạy lệnh này trong project của bạn:
    
@@ -28,36 +27,11 @@ Do chúng ta cài Faker thông qua commposer nên để sử dụng nó bạn ch
 Mọi thứ cấu hình coi như đã xong, việc kế tiếp là bạn khởi tạo một class của nó, chúng ta hãy xem xét ví dụ dưới đây:
 
     use Faker\Fake;
-=======
-## Installation
- composer require nguyenthang011099/faker-viet-nam
+
  
  
 ### Create Fake Class (Example)
-    public function __construct()
-        {
-            $this->Name= new Name();
-            $this->Address= new Address();
-            $this->Phone= new Phone();
-        }
-        public function __get($attribute)
-        {
-            return $this->$attribute->random();
-    
-        }
-### Name
-     public function random()
-        {
-            return $this->firstName[array_rand($this->firstName)]." ".
-                   $this->midName[array_rand($this->midName)]." ".
-                   $this->lastName[array_rand($this->lastName)]."\n";
-    
-        }
-        
-        
-    name        //Nguyen Minh Thang
->>>>>>> f2207d5eafeed3f29d97c309a501fdfd48cb8b3a
-   
+
     $faker = new Fake();
      //khoi tao đối tượng faker
     echo $faker->name;
