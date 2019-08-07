@@ -2,11 +2,11 @@
 
 
 namespace Faker;
-use Faker\vi_VN\Address;
-use Faker\vi_VN\Name;
-use Faker\vi_VN\Phone;
-use Faker\vi_VN\Digit;
-use Faker\vi_VN\Birth;
+use Faker\Provider\vi_VN\Address;
+use Faker\Provider\vi_VN\Name;
+use Faker\Provider\vi_VN\Phone;
+use Faker\Provider\vi_VN\Digit;
+use Faker\Provider\vi_VN\Birth;
 
 
 
