@@ -82,6 +82,6 @@ Ví dụ:
 
     <?php endfor; ?>
      
->>>>>>> f2207d5eafeed3f29d97c309a501fdfd48cb8b3a
+
 # Result
 ![](image/web.png)
