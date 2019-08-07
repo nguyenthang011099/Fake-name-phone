@@ -67,20 +67,7 @@ Ví dụ:
     firstName                                 // 'Nguyễn'
     
 
-### Phone Number
-    public function random(){
-            return $this->phoneNumber[array_rand($this->phoneNumber)];
-        }
-     phone     // 0978482834
-     
-### Birth
-     
-      public static function random()
-    {
-        $time =rand( strtotime("Jan 01 1950"), strtotime("Dec 31 2019"));
-        return date("M-d-Y", $time);
 
-    }
      
 ### Web html    
     use Faker\Fake;
