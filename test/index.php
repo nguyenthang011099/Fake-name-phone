@@ -8,6 +8,7 @@ $fake=new Fake();
     <h1><?php echo $fake->Name  ;?></h1>
     <h2><?php echo $fake->Phone." : ".$fake->Address ;?></h2>
     <br>
-    <h2><?php echo $fake->Time;?></h2>
+    <h2><?php echo $fake->Time;?></h2> 
+    <hr>
 
 <?php endfor; ?>
