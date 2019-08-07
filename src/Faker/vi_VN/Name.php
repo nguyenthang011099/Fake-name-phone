@@ -2,6 +2,8 @@
 namespace Faker\vi_VN;
 class Name{
 
+    protected static $titleMale = array('Ông', 'Chú ', 'Bác');
+    protected static $titleFemale = array('Bà ', 'Cô ', 'Dì ', 'Mợ ', 'Thím');
     public $firstName = array(
         'An', 'Anh',
         'Bào', 'Bình', 'Bạch', 'Bảo', 'Bắc', 'Bằng', 'Bổng', 'Bửu',
@@ -126,6 +128,3 @@ class Name{
             $this->lastNameMale[array_rand($this->lastNameFemale)]."\n";
     }
 }
-//$obj1= new Name();
-//echo $obj1->femaleName();
-//echo $obj1->maleName();

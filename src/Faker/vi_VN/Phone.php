@@ -8,6 +8,6 @@ class Phone{
     );
 
     public function random(){
-        return $this->phoneNumber[array_rand($this->phoneNumber)];
+        return $this->phoneNumber[array_rand($this->phoneNumber)]."\n";
     }
 }

@@ -1,10 +1,10 @@
 <?php
-require_once "vendor/autoload.php";
+require_once "../vendor/autoload.php";
 
 use Faker\Fake;
+
 $fake = new Fake();
-echo $fake->Name;
-echo $fake->Address;
-echo $fake->Phone;
-echo $fake->Digit;
-echo $fake->Time;
+echo $fake->name;
+echo $fake->address;
+echo $fake->phone;
+echo $fake->birth;
