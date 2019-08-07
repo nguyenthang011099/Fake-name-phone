@@ -61,14 +61,13 @@ Ví dụ:
 
     titleMale                                 // 'Ông'
     titleFemale                               // 'Bà'
-    name($gender = null|'male'|'female')      // 'Lê Văn An'
     lastNameMale                              // 'Trung'
     lastNameFemale                            // 'Huyền'
     firstName                                 // 'Nguyễn'
+    nameFemale                                // 'Phạm Thị Trang'
+    nameMale                                  //  'Nguyễn CHung Hiếu'
+    name                                      // 'Lê Văn An'
     
-
-
-     
 ### Web html    
     use Faker\Fake;
     $fake=new Fake();
