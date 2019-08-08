@@ -148,15 +148,7 @@ class Person
     );
     protected static $titleMale = array('Cụ', 'Ông', 'Bác', 'Chú', 'Anh', 'Em');
     protected static $titleFemale = array('Cụ', 'Bà', 'Bác', 'Cô', 'Chị', 'Em');
-//    public function middleName($gender = null)
-//    {
-//        if ($gender === static::GENDER_MALE) {
-//            return static::middleNameMale();
-//        } elseif ($gender === static::GENDER_FEMALE) {
-//            return static::middleNameFemale();
-//        }
-//        return $this->generator->parse(static::randomElement(static::$middleNameFormat));
-//    }
+
 //    public static function middleNameMale()
 //    {
 //        return static::randomElement(static::$middleNameMale);
@@ -168,6 +160,11 @@ class Person
     public function middleNameMale(){
         return static::$middleNameMale[array_rand(static::$middleNameMale)];
     }
+    public function middleNameFemale(){
+        return static::$middleNameFemale[array_rand(static::$middleNameFemale)];
+    }
+
 }
 $obj1= new Person();
 echo $obj1->middleNameMale();
+echo $obj1->middleNameFemale();
