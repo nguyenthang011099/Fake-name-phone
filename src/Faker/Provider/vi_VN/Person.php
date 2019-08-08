@@ -163,8 +163,10 @@ class Person
     public function middleNameFemale(){
         return static::$middleNameFemale[array_rand(static::$middleNameFemale)];
     }
-
+    public function middleNameFormat(){
+        return static::$middleNameFormat[array_rand(static::$middleNameFormat)];
+    }
 }
 $obj1= new Person();
-echo $obj1->middleNameMale();
+echo $obj1->middleNameFormat();
 echo $obj1->middleNameFemale();
