@@ -165,9 +165,9 @@ class Person
 //    {
 //        return static::randomElement(static::$middleNameFemale);
 //    }
-    public function fucmiddleNameMale(){
+    public function middleNameMale(){
         return static::$middleNameMale[array_rand(static::$middleNameMale)];
     }
 }
 $obj1= new Person();
-echo $obj1->fucmiddleNameMale();
+echo $obj1->middleNameMale();
