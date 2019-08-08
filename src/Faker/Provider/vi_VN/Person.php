@@ -46,7 +46,7 @@ class Person
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
      */
-    protected  $middleNameMale = array(
+    protected static $middleNameMale = array(
         'An', 'Anh',
         'Bá', 'Bách', 'Bình', 'Bích', 'Bảo', 'Bằng', 'Bửu', 'Bữu',
         'Cao', 'Chiêu', 'Chiến', 'Chung', 'Chuẩn', 'Chánh', 'Chí', 'Chính', 'Chấn', 'Chế', 'Cát', 'Công', 'Cương', 'Cường', 'Cảnh',
@@ -166,7 +166,7 @@ class Person
 //        return static::randomElement(static::$middleNameFemale);
 //    }
     public function fucmiddleNameMale(){
-        return $this->middleNameMale[array_rand($this->middleNameMale)];
+        return static::$middleNameMale[array_rand(static::$middleNameMale)];
     }
 }
 $obj1= new Person();
