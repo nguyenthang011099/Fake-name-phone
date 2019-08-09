@@ -20,7 +20,7 @@ class Person
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
      */
-    protected  static $firstNameMale = array(
+    protected static $firstNameMale = array(
         'An', 'Anh',
         'Bào', 'Bình', 'Bạch', 'Bảo', 'Bắc', 'Bằng', 'Bổng', 'Bửu',
         'Ca', 'Canh', 'Chiến', 'Chiểu', 'Châu', 'Chính', 'Chương', 'Chưởng', 'Chấn', 'Công', 'Cơ', 'Cương', 'Cường', 'Cảnh', 'Cần', 'Cẩn',
@@ -157,34 +157,52 @@ class Person
 //    {
 //        return static::randomElement(static::$middleNameFemale);
 //    }
-    public function middleNameMale(){
+    public function middleNameMale()
+    {
         return static::$middleNameMale[array_rand(static::$middleNameMale)];
     }
-    public function middleNameFemale(){
+
+    public function middleNameFemale()
+    {
         return static::$middleNameFemale[array_rand(static::$middleNameFemale)];
     }
-    public function middleNameFormat(){
+
+    public function middleNameFormat()
+    {
         return static::$middleNameFormat[array_rand(static::$middleNameFormat)];
     }
-    public function tittleMale(){
+
+    public function tittleMale()
+    {
         return static::tittleMale[array_rand(static::$titleMale)];
     }
-    public function tittleFemale(){
+
+    public function tittleFemale()
+    {
         return static::tittleFemale[array_rand(static::$titleFemale)];
     }
+
     //ten nam= firstNameMale
-    public function firstNameMale(){
+    public function firstNameMale()
+    {
         return static::firstNameMale[array_rand(static::firstNameMale)];
     }
+
     //ten nu= firstNameFemale
-    public function firstNameFemale(){
+    public function firstNameFemale()
+    {
         return static::$firstNameFemale[array_rand(static::$firstNameFemale)];
     }
+
     //ten ho= lastName
-    public function lastName(){
+    public function lastName()
+    {
         return static::$lastName[array_rand(static::$lastName)];
     }
 
 
 }
-echo Person::firstNameMale();
+
+$obj= new Person();
+
+echo $obj->middleNameFormat();
