@@ -20,6 +20,9 @@ class Generator
     {
         return call_user_func_array($this->getFormatter($formatter), $arguments);
     }
+    //trả về các hàm trong class
+    //tên từng class gán là formatter
+    //mỗi method được gán là 1 argument
 
     public function getFormatter($formatter)
     {
@@ -33,8 +36,10 @@ class Generator
             if (method_exists($provider, $formatter)) {
                 //method_exists trả về TRUE nếu tên của hàm đã được định nghĩa từ Objecct còn không thì trả FALSE
                 $this->formatters[$formatter] = array($provider, $formatter);
-                
+                //formatters là một mảng chứa provider và formatter
+                //trong đó provider là các atttribute, còn formatter là method
                 return $this->formatters[$formatter];
+                // trả về mảng formatters
             }
         }
         throw new \InvalidArgumentException(sprintf('Unknown formatter "%s"', $formatter));
