@@ -61,7 +61,7 @@ class Generator
     {
         return $this->format($matches[1]);
     }
-    // trả về mảng fomat nhưng ở key vì matches[1]  <=>attributes
+    // trả về mảng format nhưng ở key vì matches[1]  <=>attributes
 
 
 
@@ -70,6 +70,11 @@ class Generator
         return $this->format($attribute);
     }
 
+    //hàm call sẽ được gọi tới một phương thức nào đó không tồn tại trong đối tượng
+    //vi du: $person = new Person();
+    //       $person->nameMale('Khoa');
+    //VẬY hàm sẽ return format có method là : nameMale()
+    //                         có attribute là: Khoa
     public function __call($method, $attributes)
     {
         return $this->format($method, $attributes);
