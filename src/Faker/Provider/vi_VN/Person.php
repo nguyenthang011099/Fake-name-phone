@@ -182,6 +182,12 @@ class Person
         return static::$titleFemale[array_rand(static::$titleFemale)];
     }
 
+
+
+    public function firstName(){
+        $firstName=array_merge(static::$firstNameMale,static::$firstNameFemale);
+        return $firstName[array_rand($firstName)];
+    }
     //ten nam= firstNameMale
     public function firstNameMale()
     {
@@ -194,6 +200,9 @@ class Person
         return static::$firstNameFemale[array_rand(static::$firstNameFemale)];
     }
 
+
+
+    
     //ten ho= lastName
     public function lastName()
     {
@@ -205,4 +214,4 @@ class Person
 
 $obj= new Person();
 
-echo $obj->tittleMale();
+echo $obj->firstName();
