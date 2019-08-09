@@ -172,8 +172,19 @@ class Person
     public function tittleFemale(){
         return static::tittleFemale[array_rand(static::$titleFemale)];
     }
+    //ten nam= firstNameMale
+    public function firstNameMale(){
+        return static::firstNameMale[array_rand(static::firstNameMale)];
+    }
+    //ten nu= firstNameFemale
+    public function firstNameFemale(){
+        return static::$firstNameFemale[array_rand(static::$firstNameFemale)];
+    }
+    //ten ho= lastName
+    public function lastName(){
+        return static::$lastName[array_rand(static::$lastName)];
+    }
+
 
 }
-$obj1= new Person();
-echo $obj1->middleNameFormat();
-echo $obj1->middleNameFemale();
+echo Person::firstNameMale();
