@@ -1,25 +1,24 @@
 <?php
+
 class Person
 {
     protected static $maleNameFormats = array(
         '{{lastName}} {{firstNameMale}}',
-        '{{titleMale}}. {{lastName}} {{firstNameMale}}',
+        '{{titleMale}}: {{lastName}} {{firstNameMale}}',
         '{{lastName}} {{middleNameMale}} {{firstNameMale}}',
-        '{{titleMale}}. {{lastName}} {{middleNameMale}} {{firstNameMale}}',
+        '{{titleMale}}: {{lastName}} {{middleNameMale}} {{firstNameMale}}',
     );
     protected static $femaleNameFormats = array(
         '{{lastName}} {{firstNameFemale}}',
-        '{{titleFemale}}. {{lastName}} {{firstNameFemale}}',
+        '{{titleFemale}}: {{lastName}} {{firstNameFemale}}',
         '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
-        '{{titleFemale}}. {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
+        '{{titleFemale}}: {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
     );
     protected static $middleNameFormat = array(
         '{{firstNameMale}}',
         '{{firstNameFemale}}',
     );
-    /**
-     * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
-     */
+
     protected static $firstNameMale = array(
         'An', 'Anh',
         'Bào', 'Bình', 'Bạch', 'Bảo', 'Bắc', 'Bằng', 'Bổng', 'Bửu',
@@ -43,9 +42,7 @@ class Person
         'Đan', 'Điền', 'Điệp', 'Đoàn', 'Đình', 'Đôn', 'Đăng', 'Đại', 'Đạo', 'Đạt', 'Định', 'Đồng', 'Độ', 'Đức', 'Đức',
         'Ẩn',
     );
-    /**
-     * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
-     */
+
     protected static $middleNameMale = array(
         'An', 'Anh',
         'Bá', 'Bách', 'Bình', 'Bích', 'Bảo', 'Bằng', 'Bửu', 'Bữu',
@@ -172,6 +169,13 @@ class Person
         return static::$middleNameFormat[array_rand(static::$middleNameFormat)];
     }
 
+
+    public function titleName()
+    {
+        $titleName = array_merge(static::$titleFemale, static::$titleMale);
+        return $titleName[array_rand($titleName)];
+    }
+
     public function tittleMale()
     {
         return static::$titleMale[array_rand(static::$titleMale)];
@@ -183,11 +187,12 @@ class Person
     }
 
 
-
-    public function firstName(){
-        $firstName=array_merge(static::$firstNameMale,static::$firstNameFemale);
+    public function firstName()
+    {
+        $firstName = array_merge(static::$firstNameMale, static::$firstNameFemale);
         return $firstName[array_rand($firstName)];
     }
+
     //ten nam= firstNameMale
     public function firstNameMale()
     {
@@ -201,8 +206,6 @@ class Person
     }
 
 
-
-    
     //ten ho= lastName
     public function lastName()
     {
@@ -212,6 +215,6 @@ class Person
 
 }
 
-$obj= new Person();
+$obj = new Person();
 
-echo $obj->firstName();
+echo $obj->titleName();
