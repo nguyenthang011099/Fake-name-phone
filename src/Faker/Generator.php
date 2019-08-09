@@ -37,9 +37,10 @@ class Generator
                 //method_exists trả về TRUE nếu tên của hàm đã được định nghĩa từ Objecct còn không thì trả FALSE
                 $this->formatters[$formatter] = array($provider, $formatter);
                 //formatters là một mảng chứa provider và formatter
-                //trong đó provider là các atttribute, còn formatter là method
+                //trong đó provider là ten cac class, còn formatter là dinh dang
                 return $this->formatters[$formatter];
                 // trả về mảng formatters
+                
             }
         }
         throw new \InvalidArgumentException(sprintf('Unknown formatter "%s"', $formatter));

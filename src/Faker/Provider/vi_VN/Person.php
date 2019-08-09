@@ -174,18 +174,18 @@ class Person
 
     public function tittleMale()
     {
-        return static::tittleMale[array_rand(static::$titleMale)];
+        return static::$titleMale[array_rand(static::$titleMale)];
     }
 
     public function tittleFemale()
     {
-        return static::tittleFemale[array_rand(static::$titleFemale)];
+        return static::$titleFemale[array_rand(static::$titleFemale)];
     }
 
     //ten nam= firstNameMale
     public function firstNameMale()
     {
-        return static::firstNameMale[array_rand(static::firstNameMale)];
+        return static::$firstNameMale[array_rand(static::$firstNameMale)];
     }
 
     //ten nu= firstNameFemale
@@ -205,4 +205,4 @@ class Person
 
 $obj= new Person();
 
-echo $obj->middleNameFormat();
+echo $obj->tittleMale();
