@@ -24,11 +24,16 @@ class Generator
     public function getFormatter($formatter)
     {
         if (isset($this->formatters[$formatter])) {
+            //hàm isset ở đây để kiểm tra xem $this->formatters[$formatter]) có tồn tại hay không
             return $this->formatters[$formatter];
+            //nếu có thì return $this->>formatter
         }
         foreach ($this->providers as $provider) {
+            //coi từng $provider là 1 phan tử của mảng providers[]
             if (method_exists($provider, $formatter)) {
+                //method_exists trả về TRUE nếu tên của hàm đã được định nghĩa từ Objecct còn không thì trả FALSE
                 $this->formatters[$formatter] = array($provider, $formatter);
+                
                 return $this->formatters[$formatter];
             }
         }
@@ -45,36 +50,24 @@ class Generator
     {
         return preg_replace_callback('/\{\{\s?(\w+)\s?\}\}/u', array($this, 'callFormatWithMatches'), $string);
     }
-
+    // dùng preg_match để tách các properties trong array mà mình đã khai báo
+    //ví dụ: tách array ('{titleMale}') -> titleMale gán vào mảng
     protected function callFormatWithMatches($matches)
     {
         return $this->format($matches[1]);
     }
-    
+    // trả về mảng fomat nhưng ở key vì matches[1]  <=>attributes
 
-    /**
-     * @param string $attribute
-     *
-     * @return mixed
-     */
+
+
     public function __get($attribute)
     {
         return $this->format($attribute);
     }
 
-    /**
-     * @param string $method
-     * @param array $attributes
-     *
-     * @return mixed
-     */
     public function __call($method, $attributes)
     {
         return $this->format($method, $attributes);
     }
 
-    public function __destruct()
-    {
-        $this->seed();
-    }
 }
