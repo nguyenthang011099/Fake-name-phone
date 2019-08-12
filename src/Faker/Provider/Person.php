@@ -36,9 +36,9 @@ class Person extends Base
         {
             $format = static::$femaleNameFormats[array_rand(static::$femaleNameFormats)];
         }
-       else
+        else
         {
-            $format1[]= array_merge(static::$maleNameFormats,static::$femaleNameFormats);
+            $format1= array_merge(static::$maleNameFormats,static::$femaleNameFormats);
             $format= $format1[array_rand($format1)];
 
         }
@@ -72,9 +72,12 @@ class Person extends Base
     }
     public function title($gender = null)
     {
-        if ($gender === static::GENDER_MALE) {
+        if ($gender === static::GENDER_MALE)
+        {
             return static::titleMale();
-        } elseif ($gender === static::GENDER_FEMALE) {
+        }
+        elseif ($gender === static::GENDER_FEMALE)
+        {
             return static::titleFemale();
         }
         return $this->generator->parse(static::$titleFormat[array_rand(static::$titleFormat)]);

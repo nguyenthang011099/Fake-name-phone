@@ -7,13 +7,13 @@ class Person extends \Faker\Provider\Person
     protected static $maleNameFormats = array(
 
         '{{lastName}} {{middleNameMale}} {{firstNameMale}}',
-        '{{titleMale}}. {{lastName}} {{middleNameMale}} {{firstNameMale}}',
+       // '{{titleMale}} {{lastName}} {{middleNameMale}} {{firstNameMale}}',
     );
 
     protected static $femaleNameFormats = array(
-        
+
         '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
-        '{{titleFemale}}. {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
+       // '{{titleFemale}} {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
     );
 
     protected static $middleNameFormat = array(

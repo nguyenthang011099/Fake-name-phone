@@ -1,5 +1,8 @@
 <?php
-require __DIR__ .'/../src/autoload.php';
+require __DIR__ . '/../src/autoload.php';
 $faker = Faker\Factory::create();
-echo $faker->name('male')."\n";
+for ($i = 0; $i < 5; $i++)
+{
+    echo $faker->name . "\n";
+}
 
