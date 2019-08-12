@@ -1,5 +1,5 @@
 <?php
 require __DIR__ .'/../src/autoload.php';
 $faker = Faker\Factory::create();
-echo $faker->titleFemale."\n";
+echo $faker->lastName."\n";
 
