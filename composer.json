@@ -1,13 +1,16 @@
 {
-    "name": "nguyenthang0110/fakername",
-    "description": "this is pakage to fake name data",
-    "type": "project",
+    "name": "nguyenthang0110/fakername1",
+    "description": "this is packagist fake name",
+    "type": "library",
     "license": "MIT",
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "php": ">=5.3.0"
+    },
     "autoload": {
         "psr-4": {
-            "Faker_VN\\": "src/"
+            "Faker": "src/"
         }
     }
+    
 }
