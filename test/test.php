@@ -1,10 +1,5 @@
 <?php
-require_once "../vendor/autoload.php";
+require __DIR__ .'/../src/autoload.php';
+$faker = Faker\Factory::create();
+echo $faker->titleFemale."\n";
 
-use Faker\Fake;
-
-$fake = new Fake();
-echo $fake->name;
-echo $fake->address;
-echo $fake->phone;
-echo $fake->birth;

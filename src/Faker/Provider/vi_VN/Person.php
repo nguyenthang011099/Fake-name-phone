@@ -1,24 +1,31 @@
 <?php
 
-class Person
+namespace Faker\Provider\vi_VN;
+
+class Person extends \Faker\Provider\Person
 {
     protected static $maleNameFormats = array(
         '{{lastName}} {{firstNameMale}}',
-        '{{titleMale}}: {{lastName}} {{firstNameMale}}',
+        '{{titleMale}}. {{lastName}} {{firstNameMale}}',
         '{{lastName}} {{middleNameMale}} {{firstNameMale}}',
-        '{{titleMale}}: {{lastName}} {{middleNameMale}} {{firstNameMale}}',
-    );
-    protected static $femaleNameFormats = array(
-        '{{lastName}} {{firstNameFemale}}',
-        '{{titleFemale}}: {{lastName}} {{firstNameFemale}}',
-        '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
-        '{{titleFemale}}: {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
-    );
-    protected static $middleNameFormat = array(
-        '{{firstNameMale}}',
-        '{{firstNameFemale}}',
+        '{{titleMale}}. {{lastName}} {{middleNameMale}} {{firstNameMale}}',
     );
 
+    protected static $femaleNameFormats = array(
+        '{{lastName}} {{firstNameFemale}}',
+        '{{titleFemale}}. {{lastName}} {{firstNameFemale}}',
+        '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
+        '{{titleFemale}}. {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
+    );
+
+    protected static $middleNameFormat = array(
+      '{{firstNameMale}}',
+      '{{firstNameFemale}}',
+    );
+
+    /**
+     * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
+     */
     protected static $firstNameMale = array(
         'An', 'Anh',
         'Bào', 'Bình', 'Bạch', 'Bảo', 'Bắc', 'Bằng', 'Bổng', 'Bửu',
@@ -43,6 +50,9 @@ class Person
         'Ẩn',
     );
 
+    /**
+     * @link http://www.dattenhay.vn/1001-ten-cho-be-trai.htm
+     */
     protected static $middleNameMale = array(
         'An', 'Anh',
         'Bá', 'Bách', 'Bình', 'Bích', 'Bảo', 'Bằng', 'Bửu', 'Bữu',
@@ -61,6 +71,7 @@ class Person
         'Ân',
         'Đan', 'Đinh', 'Đoàn', 'Đình', 'Đông', 'Đăng', 'Đại', 'Đạt', 'Đắc', 'Định', 'Đồng', 'Đức', 'Đăng', 'Đức',
     );
+
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-gai.htm
      */
@@ -90,6 +101,7 @@ class Person
         'Đan', 'Điệp', 'Đoan', 'Đài', 'Đàn', 'Đào', 'Đình', 'Đường', 'Đan',
         'Ý',
     );
+
     /**
      * @link http://www.dattenhay.vn/1001-ten-cho-be-gai.htm
      */
@@ -117,6 +129,7 @@ class Person
         'Đan', 'Đinh', 'Đoan', 'Đài', 'Đông', 'Đồng', 'Đan', 'Đoan',
         'Ý',
     );
+
     /**
      * @link http://vi.wikipedia.org/wiki/H%E1%BB%8D_ng%C6%B0%E1%BB%9Di_Vi%E1%BB%87t_Nam
      */
@@ -143,78 +156,29 @@ class Person
         'Vi', 'Viên', 'Võ', 'Văn', 'Vũ', 'Vương', 'Vừ', 'Xa',
         'Yên',
     );
+
     protected static $titleMale = array('Cụ', 'Ông', 'Bác', 'Chú', 'Anh', 'Em');
+
     protected static $titleFemale = array('Cụ', 'Bà', 'Bác', 'Cô', 'Chị', 'Em');
 
+//    public function middleName($gender = null)
+//    {
+//        if ($gender === static::GENDER_MALE) {
+//            return static::middleNameMale();
+//        } elseif ($gender === static::GENDER_FEMALE) {
+//            return static::middleNameFemale();
+//        }
+//
+//        return $this->generator->parse(static::randomElement(static::$middleNameFormat));
+//    }
+//
 //    public static function middleNameMale()
 //    {
 //        return static::randomElement(static::$middleNameMale);
 //    }
+//
 //    public static function middleNameFemale()
 //    {
 //        return static::randomElement(static::$middleNameFemale);
 //    }
-    public function middleNameMale()
-    {
-        return static::$middleNameMale[array_rand(static::$middleNameMale)];
-    }
-
-    public function middleNameFemale()
-    {
-        return static::$middleNameFemale[array_rand(static::$middleNameFemale)];
-    }
-
-    public function middleNameFormat()
-    {
-        return static::$middleNameFormat[array_rand(static::$middleNameFormat)];
-    }
-
-
-    public function titleName()
-    {
-        $titleName = array_merge(static::$titleFemale, static::$titleMale);
-        return $titleName[array_rand($titleName)];
-    }
-
-    public function tittleMale()
-    {
-        return static::$titleMale[array_rand(static::$titleMale)];
-    }
-
-    public function tittleFemale()
-    {
-        return static::$titleFemale[array_rand(static::$titleFemale)];
-    }
-
-
-    public function firstName()
-    {
-        $firstName = array_merge(static::$firstNameMale, static::$firstNameFemale);
-        return $firstName[array_rand($firstName)];
-    }
-
-    //ten nam= firstNameMale
-    public function firstNameMale()
-    {
-        return static::$firstNameMale[array_rand(static::$firstNameMale)];
-    }
-
-    //ten nu= firstNameFemale
-    public function firstNameFemale()
-    {
-        return static::$firstNameFemale[array_rand(static::$firstNameFemale)];
-    }
-
-
-    //ten ho= lastName
-    public function lastName()
-    {
-        return static::$lastName[array_rand(static::$lastName)];
-    }
-
-
 }
-
-$obj = new Person();
-
-echo $obj->titleName();

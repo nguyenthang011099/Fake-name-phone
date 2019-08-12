@@ -4,12 +4,16 @@ namespace Faker;
 
 class Factory
 {
-    const DEFAULT_LOCALE = 'en_US';
+    const DEFAULT_LOCALE = 'vi_VN';
 
-    protected static $defaultProviders = array('Address', 'Barcode', 'Biased', 'Color', 'Company',
-        'DateTime', 'File', 'HtmlLorem', 'Image', 'Internet', 'Lorem', 'Miscellaneous', 'Payment',
-        'Person', 'PhoneNumber', 'Text', 'UserAgent', 'Uuid');
+    protected static $defaultProviders = array(  'Person', 'PhoneNumber');
 
+    /**
+     * Create a new generator
+     *
+     * @param string $locale
+     * @return Generator
+     */
     public static function create($locale = self::DEFAULT_LOCALE)
     {
         $generator = new Generator();
@@ -42,6 +46,11 @@ class Factory
         throw new \InvalidArgumentException(sprintf('Unable to find provider "%s" with locale "%s"', $provider, $locale));
     }
 
+    /**
+     * @param string $provider
+     * @param string $locale
+     * @return string
+     */
     protected static function findProviderClassname($provider, $locale = '')
     {
         $providerClass = 'Faker\\' . ($locale ? sprintf('Provider\%s\%s', $locale, $provider) : sprintf('Provider\%s', $provider));
