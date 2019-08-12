@@ -24,6 +24,27 @@ class Person extends Base
     protected static $femaleNameFormats = array(
         '{{firstNameFemale}} {{lastName}}',
     );
+
+
+    public function firstName($gender = null)
+    {
+        if ($gender === static::GENDER_MALE) {
+            return static::firstNameMale();
+        } elseif ($gender === static::GENDER_FEMALE) {
+            return static::firstNameFemale();
+        }
+        return $this->generator->parse(static::$firstNameFormat[array_rand(static::$firstNameFormat)]);
+    }
+    public static function firstNameMale()
+    {
+        return static::$firstNameMale[array_rand(static::$firstNameMale)];
+    }
+    public static function firstNameFemale()
+    {
+        return (static::$firstNameFemale[array_rand(static::$firstNameFemale)]);
+    }
+
+
     public function lastName()
     {
         return static::$lastName[array_rand(static::$lastName)];
