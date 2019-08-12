@@ -5,15 +5,13 @@ namespace Faker\Provider\vi_VN;
 class Person extends \Faker\Provider\Person
 {
     protected static $maleNameFormats = array(
-        '{{lastName}} {{firstNameMale}}',
-        '{{titleMale}}. {{lastName}} {{firstNameMale}}',
+
         '{{lastName}} {{middleNameMale}} {{firstNameMale}}',
         '{{titleMale}}. {{lastName}} {{middleNameMale}} {{firstNameMale}}',
     );
 
     protected static $femaleNameFormats = array(
-        '{{lastName}} {{firstNameFemale}}',
-        '{{titleFemale}}. {{lastName}} {{firstNameFemale}}',
+        
         '{{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
         '{{titleFemale}}. {{lastName}} {{middleNameFemale}} {{firstNameFemale}}',
     );
