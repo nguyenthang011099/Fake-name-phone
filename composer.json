@@ -9,7 +9,11 @@
     },
     "autoload": {
         "psr-4": {
+<<<<<<< HEAD
             "Faker\\": "src/Faker/"
+=======
+             "Faker\\": "src/Faker/"
+>>>>>>> 8870e3d429adc3363183cc5d24d4406910f4cacd
         }
     }
     
