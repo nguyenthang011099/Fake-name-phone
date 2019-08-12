@@ -12,7 +12,7 @@ Faker là một thư viện được sử dụng trong PHP- cái mà chúng ta s
 ## Cài Đặt
 Chúng ta có nhiều cách cài đặt nó, bạn có thể tải nó về song sau đó copy vào thư mục project của bạn, nhưng tôi khuyên bạn nên dùng composer cho công việc này, để cài đặt nó bạn chỉ cần chạy lệnh này trong project của bạn:
    
-   composer create-project nguyenthang0110/fakername
+   composer require nguyenthang0110/fakername1
 
 ** chú ý: Faker yêu cầu PHP bản 5.3 trở lên
 ## Cách sử dụng
