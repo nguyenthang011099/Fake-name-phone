@@ -6,7 +6,7 @@ class Factory
 {
     const DEFAULT_LOCALE = 'vi_VN';
 
-    protected static $defaultProviders = array(  'Person', 'PhoneNumber');
+    protected static $defaultProviders = array(  'Person');
 
     /**
      * Create a new generator

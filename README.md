@@ -72,5 +72,4 @@ Ví dụ:
     <?php endfor; ?>
      
 
-# Result
-![](image/web.png)
+
