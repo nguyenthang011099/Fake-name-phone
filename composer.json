@@ -1,0 +1,8 @@
+{
+    "name": "nguyenthang0110/fakername",
+    "description": "this is pakage to fake name data",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
