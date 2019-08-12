@@ -1,18 +1,22 @@
 {
-    "name": "nguyenthang0110/fakername1",
-    "description": "this is packagist fake name",
+    "name": "nguyenminhthang/faker",
     "type": "library",
+    "description": "Faker is a PHP library that generates fake data for you.",
+    "keywords": ["faker", "fixtures", "data"],
     "license": "MIT",
-    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Thang Nguyen"
+        }
+    ],
     "require": {
-        "php": ">=5.3.0"
+        "php": "^5.3.3 || ^7.0"
     },
+
     "autoload": {
         "psr-4": {
-
             "Faker\\": "src/Faker/"
-
         }
     }
-    
+
 }
