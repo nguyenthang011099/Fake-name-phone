@@ -19,8 +19,8 @@ class Person extends \Faker\Provider\Person
     );
 
     protected static $middleNameFormat = array(
-      '{{firstNameMale}}',
-      '{{firstNameFemale}}',
+      '{{middleNameMale}}',
+      '{{middleNameFemale}}',
     );
 
     /**
@@ -161,24 +161,24 @@ class Person extends \Faker\Provider\Person
 
     protected static $titleFemale = array('Cụ', 'Bà', 'Bác', 'Cô', 'Chị', 'Em');
 
-//    public function middleName($gender = null)
-//    {
-//        if ($gender === static::GENDER_MALE) {
-//            return static::middleNameMale();
-//        } elseif ($gender === static::GENDER_FEMALE) {
-//            return static::middleNameFemale();
-//        }
-//
-//        return $this->generator->parse(static::randomElement(static::$middleNameFormat));
-//    }
-//
-//    public static function middleNameMale()
-//    {
-//        return static::randomElement(static::$middleNameMale);
-//    }
-//
-//    public static function middleNameFemale()
-//    {
-//        return static::randomElement(static::$middleNameFemale);
-//    }
+    public function middleName($gender = null)
+    {
+        if ($gender === static::GENDER_MALE) {
+            return static::middleNameMale();
+        } elseif ($gender === static::GENDER_FEMALE) {
+            return static::middleNameFemale();
+        }
+
+        return $this->generator->parse(static::$middleNameFormat[array_rand(static::$middleNameFormat)]);
+    }
+
+    public static function middleNameMale()
+    {
+        return (static::$middleNameMale[array_rand(static::$middleNameMale)]);
+    }
+
+    public static function middleNameFemale()
+    {
+        return (static::$middleNameFemale[array_rand(static::$middleNameFemale)]);
+    }
 }

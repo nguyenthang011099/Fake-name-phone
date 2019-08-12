@@ -26,6 +26,27 @@ class Person extends Base
     );
 
 
+    public function name($gender = null)
+    {
+        if ($gender === static::GENDER_MALE)
+        {
+            $format = static::$maleNameFormats[array_rand(static::$maleNameFormats)];
+        }
+        elseif ($gender === static::GENDER_FEMALE)
+        {
+            $format = static::$femaleNameFormats[array_rand(static::$femaleNameFormats)];
+        }
+       else
+        {
+            $format1[]= array_merge(static::$maleNameFormats,static::$femaleNameFormats);
+            $format= $format1[array_rand($format1)];
+
+        }
+
+        return $this->generator->parse($format);
+    }
+
+
     public function firstName($gender = null)
     {
         if ($gender === static::GENDER_MALE) {
