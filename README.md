@@ -74,7 +74,9 @@ Ví dụ:
 ### Tạo project sử dụng package này
 
 B1: tạo một thư mục rồi require package này về : composer require nguyenminhthang/faker
+
 B2: tạo một file test ở ngay ngoài thư mục và test nội dung theo ý muốn
+
 B3: sử dụng theo hướng dẫn: ví dụ tạo ra file in ra danh sách trúng thưởng số số Miền Bắc
 
     <?php
