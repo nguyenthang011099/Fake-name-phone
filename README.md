@@ -71,5 +71,28 @@ Ví dụ:
 
     <?php endfor; ?>
      
+### Tạo project sử dụng package này
+
+B1: tạo một thư mục rồi require package này về : composer require nguyenminhthang/faker
+B2: tạo một file test ở ngay ngoài thư mục và test nội dung theo ý muốn
+B3: sử dụng theo hướng dẫn: ví dụ tạo ra file in ra danh sách trúng thưởng số số Miền Bắc
+
+    <?php
+    require __DIR__ . '/vendor/autoload.php';
+    $faker = Faker\Factory::create();
+    echo "Danh sách trúng sổ số Miền Bắc hôm nay"."\n";
+    echo "Giải Đặc Biệt : ". $faker->name('male'). "\n";
+    echo "Giải Nhất : ".$faker->name('male'). "\n";
+    echo "Giải Nhì : ".$faker->name('male'). "\n";
+    echo "Giải Ba : ".$faker->name('male'). "\n";
+    echo "Giải Khuyến Khích : ".$faker->name('male'). "\n";
+### Thu được kết quả sau:
+    Danh sách trúng sổ số Miền Bắc hôm nay
+    Giải Đặc Biệt : Nghiêm Phượng Cẩn
+    Giải Nhất : Trương Phương Án
+    Giải Nhì : Lâm Như Trác
+    Giải Ba : Xa Nhất Diệp
+    Giải Khuyến Khích : Hình Khánh Đạo
+
 
 
