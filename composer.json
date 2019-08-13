@@ -15,7 +15,7 @@
 
     "autoload": {
         "psr-4": {
-            "Faker\\": "src/Faker/"
+            "Faker_VN\\": "src/Faker/"
         }
     }
 
