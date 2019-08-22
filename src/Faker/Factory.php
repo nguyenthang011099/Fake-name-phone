@@ -30,6 +30,15 @@ class Factory
      * @param string $locale
      * @return string
      */
+
+    ///
+    /// thang dep trai 1
+    ///
+
+
+    ///thang dep trai 2
+
+    //thang dep trai 3
     protected static function getProviderClassname($provider, $locale = '')
     {
         if ($providerClass = self::findProviderClassname($provider, $locale)) {

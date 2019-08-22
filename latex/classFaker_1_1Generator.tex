@@ -1,0 +1,105 @@
+\hypertarget{classFaker_1_1Generator}{}\section{Faker\textbackslash{}Generator Class Reference}
+\label{classFaker_1_1Generator}\index{Faker\textbackslash{}\+Generator@{Faker\textbackslash{}\+Generator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_a7e6c5fd4053b6e78b9ca28dfbfab3966}\label{classFaker_1_1Generator_a7e6c5fd4053b6e78b9ca28dfbfab3966}} 
+{\bfseries add\+Provider} (\$provider)
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_a27e1507d90018984e40fa34f6b744a75}\label{classFaker_1_1Generator_a27e1507d90018984e40fa34f6b744a75}} 
+{\bfseries get\+Providers} ()
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_a79eb6bb6e45d4c10e73a8daecbedb30e}\label{classFaker_1_1Generator_a79eb6bb6e45d4c10e73a8daecbedb30e}} 
+{\bfseries format} (\$formatter, \$arguments=array())
+\item 
+\hyperlink{classFaker_1_1Generator_a13fcdc32bea33cdc2a6befa9b4519de4}{get\+Formatter} (\$formatter)
+\item 
+\hyperlink{classFaker_1_1Generator_a546a92d05f70fe8716c5948a67fd276f}{parse} (\$string)
+\item 
+\hyperlink{classFaker_1_1Generator_aae756582311926f4d61ad376038fa85f}{\+\_\+\+\_\+get} (\$attribute)
+\item 
+\hyperlink{classFaker_1_1Generator_aa717daf0edbda2f413ab8dd1045a722e}{\+\_\+\+\_\+call} (\$method, \$attributes)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_afbde496805f567bfc58f00753fe3b8bb}\label{classFaker_1_1Generator_afbde496805f567bfc58f00753fe3b8bb}} 
+{\bfseries call\+Format\+With\+Matches} (\$matches)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_a0129c2f5d5a9f0ec56ffa2f34f8c441b}\label{classFaker_1_1Generator_a0129c2f5d5a9f0ec56ffa2f34f8c441b}} 
+{\bfseries \$providers} = array()
+\item 
+\mbox{\Hypertarget{classFaker_1_1Generator_acc25fb560a2732d22ca081ac414e5907}\label{classFaker_1_1Generator_acc25fb560a2732d22ca081ac414e5907}} 
+{\bfseries \$formatters} = array()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classFaker_1_1Generator_aa717daf0edbda2f413ab8dd1045a722e}\label{classFaker_1_1Generator_aa717daf0edbda2f413ab8dd1045a722e}} 
+\index{Faker\+::\+Generator@{Faker\+::\+Generator}!\+\_\+\+\_\+call@{\+\_\+\+\_\+call}}
+\index{\+\_\+\+\_\+call@{\+\_\+\+\_\+call}!Faker\+::\+Generator@{Faker\+::\+Generator}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+call()}{\_\_call()}}
+{\footnotesize\ttfamily Faker\textbackslash{}\+Generator\+::\+\_\+\+\_\+call (\begin{DoxyParamCaption}\item[{}]{\$method,  }\item[{}]{\$attributes }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$method} & \\
+\hline
+array & {\em \$attributes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFaker_1_1Generator_aae756582311926f4d61ad376038fa85f}\label{classFaker_1_1Generator_aae756582311926f4d61ad376038fa85f}} 
+\index{Faker\+::\+Generator@{Faker\+::\+Generator}!\+\_\+\+\_\+get@{\+\_\+\+\_\+get}}
+\index{\+\_\+\+\_\+get@{\+\_\+\+\_\+get}!Faker\+::\+Generator@{Faker\+::\+Generator}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+get()}{\_\_get()}}
+{\footnotesize\ttfamily Faker\textbackslash{}\+Generator\+::\+\_\+\+\_\+get (\begin{DoxyParamCaption}\item[{}]{\$attribute }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$attribute} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mixed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFaker_1_1Generator_a13fcdc32bea33cdc2a6befa9b4519de4}\label{classFaker_1_1Generator_a13fcdc32bea33cdc2a6befa9b4519de4}} 
+\index{Faker\+::\+Generator@{Faker\+::\+Generator}!get\+Formatter@{get\+Formatter}}
+\index{get\+Formatter@{get\+Formatter}!Faker\+::\+Generator@{Faker\+::\+Generator}}
+\subsubsection{\texorpdfstring{get\+Formatter()}{getFormatter()}}
+{\footnotesize\ttfamily Faker\textbackslash{}\+Generator\+::get\+Formatter (\begin{DoxyParamCaption}\item[{}]{\$formatter }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$formatter} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Callable 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFaker_1_1Generator_a546a92d05f70fe8716c5948a67fd276f}\label{classFaker_1_1Generator_a546a92d05f70fe8716c5948a67fd276f}} 
+\index{Faker\+::\+Generator@{Faker\+::\+Generator}!parse@{parse}}
+\index{parse@{parse}!Faker\+::\+Generator@{Faker\+::\+Generator}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily Faker\textbackslash{}\+Generator\+::parse (\begin{DoxyParamCaption}\item[{}]{\$string }\end{DoxyParamCaption})}
+
+Replaces tokens (\textquotesingle{}\{\{ token\+Name \}\}\textquotesingle{}) with the result from the token method call
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$string} & String that needs to bet parsed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Faker/Generator.\+php\end{DoxyCompactItemize}
